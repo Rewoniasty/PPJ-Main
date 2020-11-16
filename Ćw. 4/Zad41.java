@@ -1,4 +1,4 @@
-public class Zad1{
+public class Zad41{
     public static void main(String[] args){
         int a = 23594 % 8000;
 
