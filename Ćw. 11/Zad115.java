@@ -3,9 +3,9 @@ import java.util.Random;
 
 public class Zad115 {
     public static void main(String[] args) {
+
         int length = ThreadLocalRandom.current().nextInt(10, 15);
         int iArr[] = new int[length];
-
         for (int i=0; i<iArr.length; i++){
             iArr[i] = i;
             System.out.print(iArr[i]+" ");
@@ -38,6 +38,5 @@ public class Zad115 {
             }
             System.out.println();
         }
-
     }
 }
