@@ -13,7 +13,7 @@ public class Zad115 {
 
         System.out.println("");
 
-        int index, temp;
+        int index, temp; //losowanie
         Random random = new Random();
         for (int i=iArr.length-1; i>=0; i--){
             index = random.nextInt(i + 1);
