@@ -17,6 +17,7 @@ public class Zad114 {
                     j++;
                 }
             }
+            in.close();
         }
     }
 }
