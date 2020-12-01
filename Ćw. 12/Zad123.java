@@ -1,26 +1,40 @@
-public class Zad123 {
+import java.util.Arrays;
+
+public class Zad123{
     public static void main(String[] args) {
-        int[] arr = {153,333,370,515,407,80};
 
-        for (int i = 0; i < arr.length; i++) {
+        int arr1[] = {1,2,3,4,5,6,7,8,9,10};
+        int arr2[] = {11,10,8,7,6,5,4,3,2,1};
+        int temp = 0;
+        int len_same = 1;
+        int sum[] = new int [10];
 
-            String temp = Integer.toString(arr[i]);
-            int[] arr_int = new int[temp.length()];
-
-            for (int j = 0; j < temp.length(); j++){
-                arr_int[j] = temp.charAt(j) - '0';
-            }
-
-            int armstrong = 0;
-
-            for (int j = 0; j < arr_int.length; j++){
-                armstrong += Math.pow(arr_int[j], arr_int.length);
-            }
-
-            if (armstrong == arr[i])
-                System.out.println(true);
-            else
-                System.out.println(false);
+        for (int i = 0; i < arr2.length; i++) {
+            sum[i] = arr1[i] + arr2[i];
         }
+
+        Arrays.sort(sum);
+
+        for (int i = 0; i < sum.length - 1; i++) {
+            if (sum[i] != sum[i+1]){
+                len_same++;
+            }
+        }
+
+        int same[] = new int [len_same];
+        int index = 0;
+        same[index] = sum[0];
+
+        for (int i = 0; i < sum.length; i++){
+            if (sum[i] == same[index]){
+                continue;
+            }
+            else{
+                same[index+1] = sum[i];
+                index++;   
+            }
+        }
+
+
     }
 }
