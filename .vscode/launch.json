@@ -1,0 +1,196 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch PPJ_task21",
+            "request": "launch",
+            "mainClass": "PPJ_task21",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad101",
+            "request": "launch",
+            "mainClass": "Zad101",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad102",
+            "request": "launch",
+            "mainClass": "Zad102",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad103",
+            "request": "launch",
+            "mainClass": "Zad103",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad201",
+            "request": "launch",
+            "mainClass": "Zad201",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad211",
+            "request": "launch",
+            "mainClass": "Zad211",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad222",
+            "request": "launch",
+            "mainClass": "Zad222",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad223",
+            "request": "launch",
+            "mainClass": "Zad223",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad231",
+            "request": "launch",
+            "mainClass": "Zad231",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad232do4",
+            "request": "launch",
+            "mainClass": "Zad232do4",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad236",
+            "request": "launch",
+            "mainClass": "Zad236",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad241",
+            "request": "launch",
+            "mainClass": "Zad241",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad242",
+            "request": "launch",
+            "mainClass": "Zad242",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad243",
+            "request": "launch",
+            "mainClass": "Zad243",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad261",
+            "request": "launch",
+            "mainClass": "Zad261",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad262",
+            "request": "launch",
+            "mainClass": "Zad262",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad263",
+            "request": "launch",
+            "mainClass": "Zad263",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad92",
+            "request": "launch",
+            "mainClass": "Zad92",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad93",
+            "request": "launch",
+            "mainClass": "Zad93",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad94",
+            "request": "launch",
+            "mainClass": "Zad94",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad95",
+            "request": "launch",
+            "mainClass": "Zad95",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad96",
+            "request": "launch",
+            "mainClass": "Zad96",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad97",
+            "request": "launch",
+            "mainClass": "Zad97",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad98",
+            "request": "launch",
+            "mainClass": "Zad98",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad99",
+            "request": "launch",
+            "mainClass": "Zad99",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch s23061",
+            "request": "launch",
+            "mainClass": "s23061",
+            "projectName": "PPJ 2020_35b2d4d5",
+        }
+    ]
+}

@@ -50,18 +50,6 @@ public class Zad201 {
         }
         return a;
     }
-
-    public static int maxElem(int[] arr, int from) {
-        
-    }
-
-    public static int numEven(int[] arr, int from) {
-
-    }
-
-    public static int reverse(int[] arr, int from) {
-    }
-
     public static void main(String[] args) {
         // int[] arr = {1,4,6,4,7,9,34,5,3,6,235};
         // System.out.println(maxElem(arr, 0));
