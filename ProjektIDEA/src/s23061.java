@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class s23061 {
-    public static void addAircraft(Aircraft a, Aircraft[][] arr2D, int lines) {
+    public static void addAircraft(Aircraft a, Aircraft[][]arr2D, int lines){
         int index = a.geometricSequenceIndex();
         for (int i = 0; i < lines; i++) {
             if (null == arr2D[index][i]) {
@@ -24,14 +24,7 @@ public class s23061 {
             if (args[0].equals("load")) {
                 try {
                     File data = new File("data.txt");
-
-                    int multi = 0;
-                    try{
-                        multi = Integer.parseInt(args[1]);
-                    } catch (ArrayIndexOutOfBoundsException e){
-                        System.out.println("Load multiplier not specified");
-                        return;
-                    }
+                    int multi = Integer.parseInt(args[1]);
 
                     Scanner scanLines = new Scanner(data);
                     int lines = 0;
@@ -62,10 +55,12 @@ public class s23061 {
                                             preparedAircraftData[7], // nationality
                                             preparedAircraftData[8], // hub
                                             preparedAircraftData[9]); // code
+
                                     addAircraft(ap, tempAircrafts, lines);
                                     break;
                                 case "AirshipCargo":
-                                    AirshipCargo ac = new AirshipCargo((int) (Math.random() * 2187 / Math.sqrt(2)), // x
+                                    AirshipCargo ac = new AirshipCargo(
+                                            (int) (Math.random() * 2187 / Math.sqrt(2)), // x
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // y
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // z
                                             Integer.parseInt(preparedAircraftData[4]), // velocity
@@ -74,10 +69,12 @@ public class s23061 {
                                             preparedAircraftData[7], // nationality
                                             Double.parseDouble(preparedAircraftData[8]), // cargoCapacity
                                             preparedAircraftData[9]); // brand
+
                                     addAircraft(ac, tempAircrafts, lines);
                                     break;
                                 case "Drone":
-                                    Drone d = new Drone((int) (Math.random() * 2187 / Math.sqrt(2)), // x
+                                    Drone d = new Drone(
+                                            (int) (Math.random() * 2187 / Math.sqrt(2)), // x
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // y
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // z
                                             Integer.parseInt(preparedAircraftData[4]), // velocity
@@ -85,10 +82,12 @@ public class s23061 {
                                             Double.parseDouble(preparedAircraftData[6]), // vector
                                             preparedAircraftData[7], // nationality
                                             Integer.parseInt(preparedAircraftData[8])); // noEngines
+
                                     addAircraft(d, tempAircrafts, lines);
                                     break;
                                 case "FighterJet":
-                                    FighterJet f = new FighterJet((int) (Math.random() * 2187 / Math.sqrt(2)), // x
+                                    FighterJet f = new FighterJet(
+                                            (int) (Math.random() * 2187 / Math.sqrt(2)), // x
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // y
                                             (int) (Math.random() * 2187 / Math.sqrt(2)), // z
                                             Integer.parseInt(preparedAircraftData[4]), // velocity
@@ -96,20 +95,23 @@ public class s23061 {
                                             Double.parseDouble(preparedAircraftData[6]), // vector
                                             preparedAircraftData[7], // nationality
                                             preparedAircraftData[8]); // model
+
                                     addAircraft(f, tempAircrafts, lines);
                                     break;
                                 case "Baloon":
-                                    Baloon b = new Baloon((int) (Math.random() * 2187 / Math.sqrt(2)), // x
-                                            (int) (Math.random() * 2187 / Math.sqrt(2)), // y
-                                            (int) (Math.random() * 2187 / Math.sqrt(2)), // z
-                                            Integer.parseInt(preparedAircraftData[4]), // velocity
-                                            Integer.parseInt(preparedAircraftData[5]), // maxNoPeople
-                                            Double.parseDouble(preparedAircraftData[6]), // vector
-                                            preparedAircraftData[7], // nationality
-                                            preparedAircraftData[8], // color
-                                            Double.parseDouble(preparedAircraftData[9])); // airVolume
-                                    addAircraft(b, tempAircrafts, lines);
-                                    break;
+                                Baloon b = new Baloon(
+                                        (int) (Math.random() * 2187 / Math.sqrt(2)), // x
+                                        (int) (Math.random() * 2187 / Math.sqrt(2)), // y
+                                        (int) (Math.random() * 2187 / Math.sqrt(2)), // z
+                                        Integer.parseInt(preparedAircraftData[4]), // velocity
+                                        Integer.parseInt(preparedAircraftData[5]), // maxNoPeople
+                                        Double.parseDouble(preparedAircraftData[6]), // vector
+                                        preparedAircraftData[7], // nationality
+                                        preparedAircraftData[8], // color
+                                        Double.parseDouble(preparedAircraftData[9])); // airVolume
+
+                                addAircraft(b, tempAircrafts, lines);
+                                break;
                             }
                         }
                     }
@@ -152,7 +154,7 @@ class Aircraft {
 
     public int distance(int x, int y) {
         return (int) (Math.sqrt(x * x + y * y));
-    }   
+    }
 
     public int geometricSequenceIndex() {
         int distance = this.distance(x, y);
@@ -168,16 +170,15 @@ class Aircraft {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "," + this.x + "," + this.y + "," + this.z + "," + this.velocity + ","
-                + this.maxNoPeople + "," + this.vector + "," + this.nationality;
+        return this.getClass().getName() + "," + this.x + "," + this.y + "," + this.z + "," + this.velocity + "," + this.maxNoPeople + "," + this.vector + ","
+                + this.nationality;
     }
 }
 
 class AirshipPassenger extends Aircraft {
     protected String hub, code;
 
-    public AirshipPassenger(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality,
-            String hub, String code) {
+    public AirshipPassenger(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality, String hub, String code) {
         super(x, y, z, velocity, maxNoPeople, vector, nationality);
         this.hub = hub;
         this.code = code;
@@ -193,8 +194,7 @@ class AirshipCargo extends Aircraft {
     protected double cargoCapacity;
     protected String brand;
 
-    public AirshipCargo(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality,
-            double cargoCapacity, String brand) {
+    public AirshipCargo(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality, double cargoCapacity, String brand) {
         super(x, y, z, velocity, maxNoPeople, vector, nationality);
         this.cargoCapacity = cargoCapacity;
         this.brand = brand;
@@ -224,8 +224,7 @@ class FighterJet extends Aircraft {
     protected double mach;
     protected String model;
 
-    public FighterJet(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality,
-            String model) {
+    public FighterJet(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality, String model) {
         super(x, y, z, velocity, maxNoPeople, vector, nationality);
         this.mach = velocity * 0.000809;
         this.model = model;
@@ -237,12 +236,11 @@ class FighterJet extends Aircraft {
     }
 }
 
-class Baloon extends Aircraft {
+class Baloon extends Aircraft{
     protected String color;
     protected double airVolume;
 
-    public Baloon(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality, String color,
-            double airVolume) {
+    public Baloon(int x, int y, int z, int velocity, int maxNoPeople, double vector, String nationality, String color, double airVolume) {
         super(x, y, z, velocity, maxNoPeople, vector, nationality);
         this.color = color;
         this.airVolume = airVolume;
@@ -253,3 +251,6 @@ class Baloon extends Aircraft {
         return super.toString() + "," + this.color + "," + this.airVolume;
     }
 }
+
+// helikopter
+// sterowiec

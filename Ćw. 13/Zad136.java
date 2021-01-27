@@ -16,6 +16,7 @@ public class Zad136 {
         }
         for (int i = 0; i < arr.length; i++) {
             sum2 = arr [i][7-i];
+            show(arr);
         }
         
         System.out.println(sum1);
