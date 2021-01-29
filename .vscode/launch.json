@@ -6,23 +6,30 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Kolos2",
+            "name": "Launch Zad284",
             "request": "launch",
-            "mainClass": "Kolos2",
+            "mainClass": "Zad284",
             "projectName": "PPJ 2020_35b2d4d5"
         },
         {
             "type": "java",
-            "name": "Launch Zad272",
+            "name": "Launch Zad283",
             "request": "launch",
-            "mainClass": "Zad272",
+            "mainClass": "Zad283",
             "projectName": "PPJ 2020_35b2d4d5"
         },
         {
             "type": "java",
-            "name": "Launch Zad271",
+            "name": "Launch Zad282",
             "request": "launch",
-            "mainClass": "Zad271",
+            "mainClass": "Zad282",
+            "projectName": "PPJ 2020_35b2d4d5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zad281",
+            "request": "launch",
+            "mainClass": "Zad281",
             "projectName": "PPJ 2020_35b2d4d5"
         },
         {
@@ -30,7 +37,7 @@
             "name": "Launch with Arguments Prompt",
             "request": "launch",
             "mainClass": "${file}",
-            "args": "save"
+            "args": "load 2"
         },
         {
             "type": "java",

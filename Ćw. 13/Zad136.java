@@ -22,4 +22,7 @@ public class Zad136 {
         System.out.println(sum1);
         System.out.println(sum2);
     }
+
+    private static void show(float[][] arr) {
+    }
 }
